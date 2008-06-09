@@ -84,7 +84,6 @@ EOF
 
 %postun
 %{clean_menus}
-%{update_menus}
 %{make_session}
 
 %clean

@@ -1,13 +1,13 @@
 %define name	4stAttack
 %define version	2.1.4
-%define release	%mkrel 8
+%define release	%mkrel 9
 
 Summary:	Connect-four for pygame
 Name:		%{name}
 Version:	%{version}
 Release:	%{release}
 Group:		Games/Boards
-License:	GPL
+License:	GPLv2
 URL:		http://forcedattack.sourceforge.net
 Source:		http://belnet.dl.sourceforge.net/sourceforge/forcedattack/%{name}-%{version}.tar.bz2
 Source2:	%{name}-icons.tar.bz2
@@ -30,13 +30,13 @@ This rpm works with the portable pygame game-engine.
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_gamesbindir}/%{name}
-cp -R *  $RPM_BUILD_ROOT%{_gamesbindir}/%{name}
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{_gamesbindir}/%{name}
+cp -R *  %{buildroot}%{_gamesbindir}/%{name}
 #icon
-install -D -m644 %{name}48.png $RPM_BUILD_ROOT%{_liconsdir}/%{name}.png
-install -D -m644 %{name}32.png $RPM_BUILD_ROOT%{_iconsdir}/%{name}.png
-install -D -m644 %{name}16.png $RPM_BUILD_ROOT%{_miconsdir}/%{name}.png
+install -D -m644 %{name}48.png %{buildroot}%{_liconsdir}/%{name}.png
+install -D -m644 %{name}32.png %{buildroot}%{_iconsdir}/%{name}.png
+install -D -m644 %{name}16.png %{buildroot}%{_miconsdir}/%{name}.png
 
 # Lets make a wrapper.
 mkdir -p %{buildroot}%{_bindir}
@@ -52,20 +52,8 @@ fi
 EOF
 
 # Menu entry
-install -m755 -d $RPM_BUILD_ROOT%{_menudir}
-cat << EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}):\
-needs="x11"\
-section="More Applications/Games/Boards"\
-title="%{name}"\
-longtitle="%{summary}"\
-command="%{name}"\
-iicon="%{name}.png" \
-xdg="true"
-EOF
-
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
-cat > $RPM_BUILD_ROOT%{_datadir}/applications/mandriva-%{name}.desktop << EOF
+mkdir -p %{buildroot}%{_datadir}/applications
+cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
 Comment=Connect-four for pygame
@@ -91,7 +79,7 @@ EOF
 %{make_session}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(644,root,root,755)
@@ -99,13 +87,12 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{_gamesbindir}/%{name}
 %{_gamesbindir}/%{name}/*
 
-%{_menudir}/%{name}
 %{_datadir}/applications/mandriva-%{name}.desktop
 
 %{_liconsdir}/%{name}.png
 %{_iconsdir}/%{name}.png
 %{_miconsdir}/%{name}.png
-#
+
 %defattr(755,root,root,755)
 %{_bindir}/%{name}
 

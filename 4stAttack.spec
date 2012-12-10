@@ -97,3 +97,36 @@ rm -rf %{buildroot}
 %{_bindir}/%{name}
 
 
+
+
+%changelog
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 2.1.4-10mdv2011.0
++ Revision: 616405
+- the mass rebuild of 2010.0 packages
+
+* Mon Jun 08 2009 Jérôme Brenier <incubusss@mandriva.org> 2.1.4-9mdv2010.0
++ Revision: 384132
+- drop old menu
+- fix license
+- clean spec file
+
+* Thu Jun 12 2008 Pixel <pixel@mandriva.com> 2.1.4-8mdv2009.0
++ Revision: 218433
+- rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+- %{update_menus} must be done in %%post, not %%postun (!)
+
+
+* Fri Mar 16 2007 Claudio Matsuoka <claudio@mandriva.com> 2.1.4-8mdv2007.1
++ Revision: 145197
+- Forced upgrade to test bugzilla product update.
+- Import 4stAttack
+
+* Mon Sep 04 2006 Nicolas L�cureuil <neoclust@mandriva.org> 2.1.4-7mdv2007.0
+- XDG
+
+* Mon Jan 02 2006 Lenny Cartier <lenny@mandrakesoft.com> 2.1.4-6mdk
+- rebuild
+
+* Thu Jun 10 2004 Lenny Cartier <lenny@mandrakesoft.com> 2.1.4-5mdk
+- rebuild
+

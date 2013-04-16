@@ -1,17 +1,12 @@
-%define name	4stAttack
-%define version	2.1.4
-%define release:	12
-
 Summary:	Connect-four for pygame
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:		4stAttack
+Version:	2.1.4
+Release:	12
 Group:		Games/Boards
 License:	GPLv2
 URL:		http://forcedattack.sourceforge.net
 Source:		http://belnet.dl.sourceforge.net/sourceforge/forcedattack/%{name}-%{version}.tar.bz2
 Source2:	%{name}-icons.tar.bz2
-BuildRoot:	%{_tmppath}/%{name}-buildroot
 Requires:	pygame >= 1.5.3
 BuildArch:	noarch
 

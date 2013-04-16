@@ -1,7 +1,7 @@
 Summary:	Connect-four for pygame
 Name:		4stAttack
 Version:	2.1.4
-Release:	12
+Release:	13
 Group:		Games/Boards
 License:	GPLv2
 URL:		http://forcedattack.sourceforge.net
@@ -61,15 +61,6 @@ Categories=X-MandrivaLinux-MoreApplications-Games-Boards;Game;BoardGame;
 EOF
 
 
-%post
-%{make_session}
-
-%postun
-%{make_session}
-
-%clean
-rm -rf %{buildroot}
-
 %files
 %defattr(644,root,root,755)
 %doc changelog.txt README.txt
@@ -93,7 +84,7 @@ rm -rf %{buildroot}
 + Revision: 616405
 - the mass rebuild of 2010.0 packages
 
-* Mon Jun 08 2009 Jérôme Brenier <incubusss@mandriva.org> 2.1.4-9mdv2010.0
+* Mon Jun 08 2009 JÃ©rÃ´me Brenier <incubusss@mandriva.org> 2.1.4-9mdv2010.0
 + Revision: 384132
 - drop old menu
 - fix license
@@ -110,7 +101,7 @@ rm -rf %{buildroot}
 - Forced upgrade to test bugzilla product update.
 - Import 4stAttack
 
-* Mon Sep 04 2006 Nicolas L�cureuil <neoclust@mandriva.org> 2.1.4-7mdv2007.0
+* Mon Sep 04 2006 Nicolas Lécureuil <neoclust@mandriva.org> 2.1.4-7mdv2007.0
 - XDG
 
 * Mon Jan 02 2006 Lenny Cartier <lenny@mandrakesoft.com> 2.1.4-6mdk

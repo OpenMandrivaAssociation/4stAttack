@@ -1,6 +1,6 @@
 %define name	4stAttack
 %define version	2.1.4
-%define release	11
+%define release:	12
 
 Summary:	Connect-four for pygame
 Name:		%{name}

@@ -1,6 +1,6 @@
 %define name	4stAttack
 %define version	2.1.4
-%define release	%mkrel 10
+%define release	11
 
 Summary:	Connect-four for pygame
 Name:		%{name}
@@ -67,15 +67,9 @@ EOF
 
 
 %post
-%if %mdkversion < 200900
-%{update_menus}
-%endif
 %{make_session}
 
 %postun
-%if %mdkversion < 200900
-%{clean_menus}
-%endif
 %{make_session}
 
 %clean

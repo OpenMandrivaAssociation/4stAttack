@@ -1,7 +1,7 @@
 Summary:	Connect-four for pygame
 Name:		4stAttack
 Version:	2.1.4
-Release:	13
+Release:	14
 Group:		Games/Boards
 License:	GPLv2
 URL:		http://forcedattack.sourceforge.net

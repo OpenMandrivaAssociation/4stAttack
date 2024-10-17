@@ -4,7 +4,7 @@ Version:	2.1.4
 Release:	14
 Group:		Games/Boards
 License:	GPLv2
-URL:		http://forcedattack.sourceforge.net
+URL:		https://forcedattack.sourceforge.net
 Source:		http://belnet.dl.sourceforge.net/sourceforge/forcedattack/%{name}-%{version}.tar.bz2
 Source2:	%{name}-icons.tar.bz2
 Requires:	pygame >= 1.5.3
